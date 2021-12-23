@@ -8,7 +8,7 @@ Comandos e outras informações importantes para a instalação do projeto:
 - git clone https://github.com/luishdasilva/Python_Pro_Deploy_de_Projetos.git
 - pip install scanapi
 - pip install django
-- pip instal request
+- pip install request
 - pip install bs4
 
 ## Como utilizar
