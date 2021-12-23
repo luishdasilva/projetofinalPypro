@@ -21,7 +21,10 @@ Tecnologias utilizadas do projeto:
 - só testar o app
 - OBS: Caso voce digite um Url errado tera que retirar o "refe" : refe do context e atualizar a pagina, depois acrescentar o refe novamente e refazer os testes
 
+
 ## Outras observações
+- Testes unitários no Teste_api (Jupyter Notebook)
+- Teste de yaml pronto , para executar com sucesso retirar o "refe" : "refe" do context
 - Ir em views e retirar o "refe" : refe  do context = {"form" : form, "Urrls" : Urrls,"submitbutton" : submitbutton}
 - após pagina esta aberta vá até o arquivo views e digite context = {"form" : form, "Urrls" : Urrls,"refe" : refe,"submitbutton" : submitbutton}
 - Caso voce digite um Url errado tera que retirar o "refe" : refe do context e atualizar a pagina, depois acrescentar o refe novamente e refazer os testes
