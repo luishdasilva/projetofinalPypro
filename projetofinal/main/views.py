@@ -9,30 +9,33 @@ from bs4 import BeautifulSoup
 # Create your views here.
 def homepage(request):
 
-
     return render(
     request=request,
     template_name="home.html",
-    context={"cursos": projetofinal.objects.all}
+    context={"ppf": projetofinal.objects.all}
     )
 
 def formulario(request):
     submitbutton = request.POST.get("submit")
 
-    Urls = str
+    Urrls = str
 
     form = UserForm(request.POST or None)
     if form.is_valid():
-        Urls = form.cleaned_data.get("Urls")
+        Urrls = form.cleaned_data.get("Urrls")
+        if Urrls == Urrls:
+            navegar = get(Urrls)
+            tags = BeautifulSoup(navegar.text, "html5lib")
+            tds = tags.find_all("a", attrs={"class": "mw-redirect"})
+            [a.text for a in tds]
+            refe = [Urrls + h2["href"] for h2 in tds]
+            refe
+            refe = sorted(refe, reverse = True)
+            refe
 
-    navegar = get(Urls)
-    tags = BeautifulSoup(navegar.text, "html5lib")
-    tds = tags.find_all("a", attrs={"class": "mw-redirect"})
-    [a.text for a in tds]
-    refe = [Urls + h2["href"] for h2 in tds]
-    refe
 
-    context = {"form" : form, "Urls" : Urls,"refe" : refe,"submitbutton" : submitbutton}
+
+    context = {"form" : form, "Urrls" : Urrls,"submitbutton" : submitbutton} # adicione o "refe": refe quando o arquivo estiver rodando
 
     return render(
     request=request,

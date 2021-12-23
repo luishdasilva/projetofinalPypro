@@ -1,1 +1,20 @@
+<head>
+<meta charset="UTF-6">
+<title>User Information form</title>
+</head>
+<body>
+<form action="" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" name="submit" value="submit"/>
+</form>
 
+{% if submitbutton == "submit" %}
+<h1> Urrls {{Urrls}} </h1>
+<h1> Resultados </h1>
+<h1> {{refe}}</h1>
+
+{% endif %}
+
+</body>
+</script>
